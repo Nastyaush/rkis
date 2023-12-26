@@ -7,8 +7,8 @@
     <h3>Наши товары:</h3>
     {% for product in products %}
         <div>
-            <p>Название: {{product.name}}</p>
-            <p>Описание: {{product.desc}}</p>
+            <p>Название товара: {{product.name}}</p>
+            <p>Описание товара: {{product.desc}}</p>
             <p>Фото: <img class="img" src="/media/{{ product.photo }}"></p>
             <p><a href="{% url 'services-detail' product.id %}">Перейти на страницу товара/услуги</a></p>
         </div>

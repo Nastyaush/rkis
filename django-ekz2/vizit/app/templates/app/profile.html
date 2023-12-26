@@ -9,16 +9,16 @@
     <h3>Заказы пользователя:</h3>
     {% if orders %}
       {% for order in orders %}
-        <p>Название: {{order.product.name}}</p>
-        <p>Описание: {{order.product.desc}}</p>
+        <p>Название товара: {{order.product.name}}</p>
+        <p>Описание товара: {{order.product.desc}}</p>
         <p>Фото: <img class="img" src="/media/{{order.product.photo}}"></p>
         {% if not forloop.last %}<p>--------------------------------------------------------------------------------</p>{% endif %}
       {% endfor %}
     {% else %}
-      <p>У пользователя ещё нету заказов!</p>
+      <p>У пользователя ещё нет заказов</p>
     {% endif %}
   {% else %}
-    <p>Вы не вошли в свой аккаунт!</p>
+    <p>Войдите в свой аккаунт!</p>
   {% endif %}
 
 {% endblock %}
